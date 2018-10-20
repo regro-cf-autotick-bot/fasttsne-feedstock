@@ -1,5 +1,5 @@
 {% set name = "fastTSNE" %}
-{% set version = "0.2.6" %}
+{% set version = "0.2.7" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c06115ff228bebe1ff8ef1313baa9e6edda81552c96ab9045f1e4d784852d543
+  sha256: 51cc1c842c6d0b1571ef05dcdca5af6422f8b8bf38a8c2bfa5720914c87d766f
 
 build:
   number: 0
