@@ -1,5 +1,5 @@
 {% set name = "fastTSNE" %}
-{% set version = "0.2.12" %}
+{% set version = "0.2.13" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 9c93a8a46a07effb45119d6d42d820d5589d6cf144d49fd7149febbde4d72bb1
+  sha256: c602acf5e61f80bdda1bdfe91838ec89d7fdbdbb072e54c0d8da31c35fc964a0
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv "
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv"
   skip: True  # [py<35]
 
 requirements:
@@ -25,7 +25,7 @@ requirements:
     - {{ pin_compatible('numpy') }}
     - numba >=0.38.1
     - python
-    - scikit-learn >=0.19,<0.19.99
+    - scikit-learn >=0.20
     - scipy
 
 test:
